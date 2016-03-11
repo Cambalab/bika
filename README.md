@@ -25,7 +25,6 @@ Aplicación híbrida para encontrar y reseñar bicicleterías.
 1. Instalar dependencias
     ```sh
     npm install
-    bower install
     ```
 
 1. Correr app en browser
