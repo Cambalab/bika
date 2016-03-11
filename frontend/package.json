@@ -1,7 +1,7 @@
 {
-  "name": "cutepuppypics",
-  "version": "1.1.1",
-  "description": "cutePuppyPics: An Ionic project",
+  "name": "bika",
+  "version": "0.0.1",
+  "description": "Aplicación híbrida para encontrar y reseñar bicicleterías",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^2.0.4",
