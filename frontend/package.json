@@ -23,5 +23,11 @@
     "webpack": "1.12.14"
   },
   "name": "bika",
-  "description": "Bika: Aplicación híbrida para encontrar y reseñar bicicleterías."
+  "description": "Bika: Aplicación híbrida para encontrar y reseñar bicicleterías.",
+  "cordovaPlugins": [
+    "cordova-plugin-geolocation"
+  ],
+  "cordovaPlatforms": [
+    "android"
+  ]
 }
