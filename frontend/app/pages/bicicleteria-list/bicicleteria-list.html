@@ -8,14 +8,16 @@
 <ion-content>
   <ion-list>
     <button ion-item *ngFor="#bicicleteria of bicicleterias" (click)="itemTapped($event, bicicleteria)">
-      <ion-icon name="build" item-left></ion-icon>
-      {{bicicleteria.name}}
-      <div class="item-note" item-right>
+      <ion-thumbnail item-left>
+        <img src="http://lorempixel.com/image_output/abstract-q-c-56-56-8.jpg">
+      </ion-thumbnail>
+      <h2>{{bicicleteria.name}}</h2>
+      <p>
         {{bicicleteria.desc}}
-      </div>
+      </p>
     </button>
   </ion-list>
   <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.name}}</b>
+    You navigated here from <b>{{bicicleteria.name}}</b>
   </div>
 </ion-content>
