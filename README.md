@@ -1,4 +1,4 @@
-## bika
+# bika
 Aplicación híbrida para encontrar y reseñar bicicleterías.
 
 ## Instalación
@@ -56,3 +56,7 @@ Aplicación híbrida para encontrar y reseñar bicicleterías.
 ```sh
     ionic build android
 ```
+
+## Contribuir
+
+Por favor leer [Guía de contribuciones](./CONTRIBUTING.md) para más detalles
