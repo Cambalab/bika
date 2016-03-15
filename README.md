@@ -59,4 +59,4 @@ Aplicación híbrida para encontrar y reseñar bicicleterías.
 
 ## Contribuir
 
-Por favor leer [Guia de contribuciones](./CONTRIBUTING.md) para más detalles
+Por favor leer [Guía de contribuciones](./CONTRIBUTING.md) para más detalles

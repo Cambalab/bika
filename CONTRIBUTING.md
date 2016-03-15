@@ -1,6 +1,4 @@
-# CONTRIBUIR
-
-Guía de contribuciones del proyecto:
+# Guía de contribuciones
 
 1. Forkear o clonar el proyecto
 2. Crear una rama por funcionalidad (`git checkout -b mi-nueva-funcionalidad`)
