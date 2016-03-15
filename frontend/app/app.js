@@ -1,12 +1,16 @@
 import {App, IonicApp, Platform, MenuController} from 'ionic-angular';
 import {HelloIonicPage} from './pages/hello-ionic/hello-ionic';
-import {ListPage} from './pages/list/list';
-
+import {BicicleteriaListPage} from './pages/bicicleteria-list/bicicleteria-list';
+import {BicicleteriaService} from './services/bicicleteria-service';
 
 @App({
   templateUrl: 'build/app.html',
-  config: {} // http://ionicframework.com/docs/v2/api/config/Config/
+  config: {
+    serverURL: "http://localhost:8000"
+  },
+  providers: [BicicleteriaService]
 })
+
 class MyApp {
   static get parameters() {
     return [[IonicApp], [Platform], [MenuController]];
@@ -22,11 +26,11 @@ class MyApp {
     // set our app's pages
     this.pages = [
       { title: 'Hello Ionic', component: HelloIonicPage },
-      { title: 'My First List', component: ListPage }
+      { title: 'Bicicleterias', component: BicicleteriaListPage }
     ];
 
     // make HelloIonicPage the root (or first) page
-    this.rootPage = HelloIonicPage;
+    this.rootPage = BicicleteriaListPage;
   }
 
   initializeApp() {
