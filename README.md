@@ -56,3 +56,7 @@ Aplicación híbrida para encontrar y reseñar bicicleterías.
 ```sh
     ionic build android
 ```
+
+## Contribuir
+
+Por favor leer [Guia de contribuciones](./CONTRIBUTING.md) para más detalles
