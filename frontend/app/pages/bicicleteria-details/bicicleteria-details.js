@@ -2,9 +2,9 @@ import {Page, NavController, NavParams} from 'ionic-angular';
 
 
 @Page({
-  templateUrl: 'build/pages/item-details/item-details.html'
+  templateUrl: 'build/pages/bicicleteria-details/bicicleteria-details.html'
 })
-export class ItemDetailsPage {
+export class BicicleteriaDetailsPage {
   static get parameters() {
     return [[NavController], [NavParams]];
   }
