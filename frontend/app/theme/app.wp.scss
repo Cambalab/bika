@@ -30,3 +30,10 @@ $toolbar-wp-button-color: #fff;
 // App Windows Only Sass
 // --------------------------------------------------
 // CSS that should only apply to the Windows app
+
+.bar-button-default {
+  color: #fff;
+  &:hover:not(.disable-hover) {
+    color: #fff;
+  }
+}
