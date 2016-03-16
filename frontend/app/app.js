@@ -2,6 +2,7 @@ import {App, IonicApp, Platform, MenuController} from 'ionic-angular';
 import {HelloIonicPage} from './pages/hello-ionic/hello-ionic';
 import {BicicleteriaListPage} from './pages/bicicleteria-list/bicicleteria-list';
 import {BicicleteriaService} from './services/bicicleteria-service';
+import {Geolocation} from 'ionic-native';
 
 @App({
   templateUrl: 'build/app.html',
