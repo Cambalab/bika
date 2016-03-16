@@ -4,13 +4,14 @@ import {BicicleteriaListPage} from './pages/bicicleteria-list/bicicleteria-list'
 import {TabsPage} from './pages/tabs/tabs';
 import {BicicleteriaService} from './services/bicicleteria-service';
 import {Geolocation} from 'ionic-native';
+import {ANGULAR2_GOOGLE_MAPS_PROVIDERS} from 'angular2-google-maps/core';
 
 @App({
   templateUrl: 'build/app.html',
   config: {
     tabbarPlacement:'top'
   },
-  providers: [BicicleteriaService]
+  providers: [BicicleteriaService, ANGULAR2_GOOGLE_MAPS_PROVIDERS]
 })
 
 class MyApp {
