@@ -1,4 +1,6 @@
 {
+  "name": "bika",
+  "description": "Bika: Aplicación híbrida para encontrar y reseñar bicicleterías.",
   "dependencies": {
     "angular2": "2.0.0-beta.6",
     "body-parser": "^1.14.2",
@@ -27,8 +29,6 @@
     "strip-sourcemap-loader": "0.0.1",
     "webpack": "1.12.14"
   },
-  "name": "bika",
-  "description": "Bika: Aplicación híbrida para encontrar y reseñar bicicleterías.",
   "cordovaPlugins": [
     "cordova-plugin-geolocation"
   ],
