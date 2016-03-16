@@ -3,11 +3,12 @@ import {HelloIonicPage} from './pages/hello-ionic/hello-ionic';
 import {BicicleteriaListPage} from './pages/bicicleteria-list/bicicleteria-list';
 import {BicicleteriaService} from './services/bicicleteria-service';
 import {Geolocation} from 'ionic-native';
+import {ANGULAR2_GOOGLE_MAPS_PROVIDERS} from 'angular2-google-maps/core';
 
 @App({
   templateUrl: 'build/app.html',
   config: {},
-  providers: [BicicleteriaService]
+  providers: [BicicleteriaService, ANGULAR2_GOOGLE_MAPS_PROVIDERS]
 })
 
 class MyApp {
