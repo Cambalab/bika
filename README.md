@@ -21,7 +21,7 @@ Aplicación híbrida para encontrar y reseñar bicicleterías.
 
 1. Ir al directorio bika
     ```sh
-    cd bika
+    cd bika/frontend
     ```
 
 1. Instalar dependencias
