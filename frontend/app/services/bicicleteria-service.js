@@ -1,11 +1,10 @@
 import {Injectable} from 'angular2/core';
 import {Http, Headers, RequestOptions} from 'angular2/http';
-//import {SERVER_URL} from './config';
+import {API_BASE_URL} from './settings';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/Rx';
 
-//let bicicleteriasURL = SERVER_URL + 'bicicleterias/';
-let bicicleteriasURL = 'http://localhost:8000/' + 'bicicleterias/';
+let bicicleteriasURL = API_BASE_URL + 'bicicleterias/';
 
 @Injectable()
 export class BicicleteriaService {

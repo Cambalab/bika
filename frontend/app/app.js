@@ -5,9 +5,7 @@ import {BicicleteriaService} from './services/bicicleteria-service';
 
 @App({
   templateUrl: 'build/app.html',
-  config: {
-    serverURL: "http://localhost:8000"
-  },
+  config: {},
   providers: [BicicleteriaService]
 })
 
