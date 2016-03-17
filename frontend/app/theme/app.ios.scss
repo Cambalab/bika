@@ -11,6 +11,7 @@
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
+$toolbar-ios-text-color: #fff;
 
 // Ionic iOS Sass
 // --------------------------------------------------
@@ -29,3 +30,10 @@
 // App iOS Only Sass
 // --------------------------------------------------
 // CSS that should only apply to the iOS app
+
+.bar-button-default {
+  color: #fff;
+  &:hover:not(.disable-hover) {
+    color: #fff;
+  }
+}

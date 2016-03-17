@@ -11,6 +11,7 @@
 // --------------------------------------------------
 // Windows only Sass variables can go here
 
+$toolbar-wp-button-color: #fff;
 
 // Ionic Windows Sass
 // --------------------------------------------------
@@ -29,3 +30,10 @@
 // App Windows Only Sass
 // --------------------------------------------------
 // CSS that should only apply to the Windows app
+
+.bar-button-default {
+  color: #fff;
+  &:hover:not(.disable-hover) {
+    color: #fff;
+  }
+}
