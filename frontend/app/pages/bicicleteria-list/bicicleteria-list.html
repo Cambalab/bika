@@ -18,4 +18,5 @@
   <div *ngIf="selectedItem" padding>
     You navigated here from <b>{{selectedItem.name}}</b>
   </div>
+  <mapa [markers]="markers" zoom="{{zoom}}" lat="{{lat}}" lng="{{lng}}"></mapa>
 </ion-content>
