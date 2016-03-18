@@ -16,4 +16,8 @@ import {ANGULAR2_GOOGLE_MAPS_DIRECTIVES} from 'angular2-google-maps/core';
 export class Mapa {
   constructor() {
   }
+
+  clickedMarker(label, index) {
+    window.alert(`clicked the marker: ${label || index}`)
+  }
 }
