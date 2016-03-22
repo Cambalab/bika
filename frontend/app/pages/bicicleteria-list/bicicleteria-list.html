@@ -8,15 +8,55 @@
 <ion-content>
   <ion-list>
     <button ion-item *ngFor="#bicicleteria of bicicleterias" (click)="itemTapped($event, bicicleteria)">
-      <ion-thumbnail item-left>
-        <img src="upload/bicicleteria-thumbnail.jpg">
-      </ion-thumbnail>
-      <h2>{{bicicleteria.name}}</h2>
-      <p>
-        {{bicicleteria.desc}}
-      </p>
+      <ion-row>
+        <ion-col width-33>
+          <ion-thumbnail>
+            <img src="upload/bicicleteria-thumbnail.jpg">
+          </ion-thumbnail>
+        </ion-col>
+        <ion-col width-77>
+          <ion-row>
+            <h2><strong>{{bicicleteria.name}}</strong></h2>
+          </ion-row>
+          <ion-row>
+            <h3>Av. Callao 1337</h3>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+                <p>Abierto</p>
+            </ion-col>
+            <ion-col>
+                <p><ion-icon name="navigate"></ion-icon>(2.6 Km)</p>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col width-33>
+          <button primary clear>
+            <ion-icon name="basket"></ion-icon>
+            <div>Venta</div>
+          </button>
+        </ion-col>
+        <ion-col width-33>
+          <button primary clear>
+            <ion-icon name="build"></ion-icon>
+            <div>Rep.</div>
+          </button>
+        </ion-col>
+        <ion-col width-33>
+          <button primary clear>
+            <ion-icon name="shirt"></ion-icon>
+            <div>Ind.</div>
+          </button>
+        </ion-col>
+      </ion-row>
+    </button>
+    <button fab fab-right fab-bottom>
+         <ion-icon name="add"></ion-icon>
     </button>
   </ion-list>
+
   <div *ngIf="selectedItem" padding>
     You navigated here from <b>{{bicicleteria.name}}</b>
   </div>
