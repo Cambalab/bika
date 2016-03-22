@@ -1,12 +1,15 @@
 import {App, IonicApp, Platform, MenuController} from 'ionic-angular';
 import {HelloIonicPage} from './pages/hello-ionic/hello-ionic';
 import {BicicleteriaListPage} from './pages/bicicleteria-list/bicicleteria-list';
+import {TabsPage} from './pages/tabs/tabs';
 import {BicicleteriaService} from './services/bicicleteria-service';
 import {Geolocation} from 'ionic-native';
 
 @App({
   templateUrl: 'build/app.html',
-  config: {},
+  config: {
+    tabbarPlacement:'top'
+  },
   providers: [BicicleteriaService]
 })
 
@@ -23,13 +26,25 @@ class MyApp {
     this.initializeApp();
 
     // set our app's pages
+    // this.pages = [
+    //   { title: 'Hello Ionic', component: HelloIonicPage },
+    //   { title: 'Bicicleterias', component: BicicleteriaListPage }
+    // ];
     this.pages = [
-      { title: 'Hello Ionic', component: HelloIonicPage },
-      { title: 'Bicicleterias', component: BicicleteriaListPage }
+      { title: 'Hello Ionic', component: TabsPage, icon: 'calendar' },
+      { title: 'Bicicleterias', component: TabsPage, index: 1, icon: 'contacts' },
     ];
 
     // make HelloIonicPage the root (or first) page
     this.rootPage = BicicleteriaListPage;
+  }
+
+  openPage(page) {
+    // close the menu when clicking a link from the menu
+    this.menu.close();
+    // navigate to the new page if it is not the current page
+    let nav = this.app.getComponent('nav');
+    nav.setRoot(page.component);
   }
 
   initializeApp() {
@@ -52,11 +67,4 @@ class MyApp {
     });
   }
 
-  openPage(page) {
-    // close the menu when clicking a link from the menu
-    this.menu.close();
-    // navigate to the new page if it is not the current page
-    let nav = this.app.getComponent('nav');
-    nav.setRoot(page.component);
-  }
 }
