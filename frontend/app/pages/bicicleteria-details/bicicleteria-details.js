@@ -13,5 +13,14 @@ export class BicicleteriaDetailsPage {
     this.nav = nav;
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
+    this.tabBarElement = document.querySelector('#tabs ion-tabbar-section');
+  }
+
+  onPageDidEnter() {
+    this.tabBarElement.style.display = 'none';
+  }
+
+  onPageWillLeave() {
+    this.tabBarElement.style.display = 'block';
   }
 }
