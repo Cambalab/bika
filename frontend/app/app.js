@@ -31,8 +31,8 @@ class MyApp {
     //   { title: 'Bicicleterias', component: BicicleteriaListPage }
     // ];
     this.pages = [
-      { title: 'Hello Ionic', component: TabsPage, icon: 'calendar' },
-      { title: 'Bicicleterias', component: TabsPage, index: 1, icon: 'contacts' },
+      { title: 'Hello Ionic', component: TabsPage, index: 1, icon: 'calendar' },
+      { title: 'Bicicleterias', component: TabsPage, index: 0, icon: 'contacts' }
     ];
 
     // make HelloIonicPage the root (or first) page
@@ -44,7 +44,7 @@ class MyApp {
     this.menu.close();
     // navigate to the new page if it is not the current page
     let nav = this.app.getComponent('nav');
-    nav.setRoot(page.component);
+    nav.setRoot(page.component, { index: page.index });
   }
 
   initializeApp() {
