@@ -36,7 +36,7 @@ class MyApp {
     ];
 
     // make HelloIonicPage the root (or first) page
-    this.rootPage = BicicleteriaListPage;
+    this.rootPage = TabsPage;
   }
 
   openPage(page) {
