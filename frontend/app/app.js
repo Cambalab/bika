@@ -1,5 +1,5 @@
 import {App, IonicApp, Platform, MenuController} from 'ionic-angular';
-import {HelloIonicPage} from './pages/hello-ionic/hello-ionic';
+import {BicicleteriaMapa} from './pages/bicicleteria-mapa/bicicleteria-mapa';
 import {BicicleteriaListPage} from './pages/bicicleteria-list/bicicleteria-list';
 import {TabsPage} from './pages/tabs/tabs';
 import {BicicleteriaService} from './services/bicicleteria-service';
@@ -32,7 +32,7 @@ class MyApp {
     //   { title: 'Bicicleterias', component: BicicleteriaListPage }
     // ];
     this.pages = [
-      { title: 'Hello Ionic', component: TabsPage, index: 1, icon: 'calendar' },
+      { title: 'Mapa', component: TabsPage, index: 1, icon: 'calendar' },
       { title: 'Bicicleterias', component: TabsPage, index: 0, icon: 'contacts' }
     ];
 
