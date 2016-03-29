@@ -3,9 +3,12 @@
     <ion-icon name="menu"></ion-icon>
   </button>
   <ion-title>Bicicleterias</ion-title>
+  <button class="button-settings">
+    <ion-icon name="funnel"></ion-icon>
+  </button>
 </ion-navbar>
 
-<ion-content>
+<ion-content class="bicicleteria_list">
   <ion-list>
     <button ion-item *ngFor="#bicicleteria of bicicleterias" (click)="itemTapped($event, bicicleteria)">
       <ion-row>
@@ -14,37 +17,33 @@
             <img src="upload/bicicleteria-thumbnail.jpg">
           </ion-thumbnail>
         </ion-col>
-        <ion-col width-77>
+        <ion-col class="info"width-77>
           <ion-row>
-            <h2><strong>{{bicicleteria.name}}</strong></h2>
+            <span class="nombre">{{bicicleteria.name}}</span>
           </ion-row>
           <ion-row>
-            <h3>Av. Callao 1337</h3>
+            <span class="direccion">Av. Callao 1337</span>
           </ion-row>
           <ion-row>
-            <ion-col>
-                <p>Abierto</p>
-            </ion-col>
-            <ion-col>
-                <p><ion-icon name="navigate"></ion-icon>(2.6 Km)</p>
-            </ion-col>
+                <p class="estado estado-abierto">Abierto</p>
+                <span class="distancia"><ion-icon name="navigate"></ion-icon>&nbsp;(2.6 Km)</span>
           </ion-row>
         </ion-col>
       </ion-row>
-      <ion-row>
-        <ion-col width-33>
+      <ion-row class="servicios">
+        <ion-col width-33 class="service">
           <button primary clear>
             <ion-icon name="basket"></ion-icon>
             <div>Venta</div>
           </button>
         </ion-col>
-        <ion-col width-33>
+        <ion-col width-33 class="service">
           <button primary clear>
             <ion-icon name="build"></ion-icon>
             <div>Rep.</div>
           </button>
         </ion-col>
-        <ion-col width-33>
+        <ion-col width-33 class="service">
           <button primary clear>
             <ion-icon name="shirt"></ion-icon>
             <div>Ind.</div>
@@ -52,7 +51,7 @@
         </ion-col>
       </ion-row>
     </button>
-    <button fab fab-right fab-bottom>
+    <button class="button-add" danger fab fab-right fab-bottom>
          <ion-icon name="add"></ion-icon>
     </button>
   </ion-list>
