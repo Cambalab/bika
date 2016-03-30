@@ -47,6 +47,14 @@ class MyApp {
     nav.setRoot(page.component, { index: page.index });
   }
 
+  openPage(page) {
+    // close the menu when clicking a link from the menu
+    this.menu.close();
+    // navigate to the new page if it is not the current page
+    let nav = this.app.getComponent('nav');
+    nav.setRoot(page.component);
+  }
+
   initializeApp() {
     this.platform.ready().then(() => {
       // The platform is now ready. Note: if this callback fails to fire, follow

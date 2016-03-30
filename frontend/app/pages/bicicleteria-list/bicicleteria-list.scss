@@ -1,0 +1,51 @@
+.bicicleteria_list{
+  .button-add{
+    position: fixed;
+  }
+  ion-label{
+    margin-bottom: 0 !important;
+  }
+  ion-thumbnail img{
+    margin: 0 auto;
+  }
+  .info{
+    margin-top: -5px;
+    ion-row{
+      padding: 5px;
+    }
+    .nombre{
+      font-weight: bold;
+      font-size: 1.4rem;
+    }
+    .direccion{
+      font-size: 1.4rem;
+    }
+    .distancia{
+      width: 100%;
+      text-align: right;
+      font-size: 1.4rem;
+      ion-icon{
+        font-size: 2rem;
+        vertical-align: middle;
+      }
+    }
+    .estado{
+      font-size: 1.4rem;
+      &-abierto{
+        color:green;
+      }
+      &-cerrado{
+        color:red;
+      }
+    }
+  }
+  .servicios{
+    ion-col{
+      padding-top:0px;
+    }
+    .service{
+      text-align: center;
+    }
+  }
+
+}
