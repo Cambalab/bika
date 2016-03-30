@@ -1,7 +1,47 @@
-div.selection {
-  font-size: 22px;
-  display: block;
-  text-align: center;
-  padding-top: 5%;
+.bicicleteria_detalle{
+  .info{
+    margin-top: 7px;
+    .estado{
+       font-size: 1.4rem;
+      &-abierto{
+        color:green;
+      }
+      &-cerrado{
+        color:red;
+      }
+    }
+    ion-label{
+      margin:0;
+    }
+    ion-col{
+      padding:0;
+    }
+  }
+  .horario{
+    h2{
+      display: inline-block;
+    }
+    ion-icon{
+      vertical-align: middle;
+    }
+    ion-label{
+      margin:0;
+    }
+  }
+  .servicios{
+    padding:0;
+    ion-col{
+      text-align: center;
+      padding:0;
+    }
+    .button{
+      height: 2em;
+    }
+  }
+  div.selection {
+    font-size: 22px;
+    display: block;
+    text-align: center;
+    padding-top: 5%;
+  }
 }
-

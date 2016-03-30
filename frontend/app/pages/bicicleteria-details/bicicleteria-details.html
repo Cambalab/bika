@@ -5,39 +5,54 @@
   <ion-title>Bicicleteria</ion-title>
 </ion-navbar>
 
-<ion-content>
+<ion-content class="bicicleteria_detalle">
 
   <ion-card *ngIf="selectedItem">
 
     <img src="upload/bicicleteria.jpg">
 
-    <ion-item>
-      <h2>{{selectedItem.name}}</h2>
-      <p>Abierto / Cerrado</p>
+    <ion-item class="info">
+      <ion-row>
+        <ion-col>
+          <span class="nombre">{{selectedItem.name}}</span>
+        </ion-col>
+        <ion-col>
+          <span class="estado estado-abierto">Abierto</span>
+        </ion-col>
+      </ion-row>
     </ion-item>
 
-    <ion-item>
-      <h2>Horarios</h2>
-      <ion-row>
-        <p item-left>L a V:&nbsp;</p>
-        <p item-right>8 a 20 hs</p>
-      </ion-row>
-      <ion-row>
-        <p item-left>Sabado:&nbsp;</p>
-        <p item-right>10 a 18 hs</p>
-      </ion-row>
-      <ion-row>
-        <p item-left>Domingo:&nbsp;</p>
-        <p item-right>Cerrados</p>
-      </ion-row>
+    <hr />
 
+    <ion-item class="horario">
+      <div (click)="toggleHorario()">
+        <h2>Horarios&nbsp;</h2>
+        <ion-icon *ngIf="mostrarHorario" name="arrow-up"></ion-icon>
+        <ion-icon *ngIf="!mostrarHorario" name="arrow-down"></ion-icon>
+      </div>
+      <div *ngIf="mostrarHorario">
+        <ion-row>
+          <p item-left>L a V:&nbsp;</p>
+          <p item-right>8 a 20 hs</p>
+        </ion-row>
+        <ion-row>
+          <p item-left>Sabado:&nbsp;</p>
+          <p item-right>10 a 18 hs</p>
+        </ion-row>
+        <ion-row>
+          <p item-left>Domingo:&nbsp;</p>
+          <p item-right>Cerrados</p>
+        </ion-row>
+      </div>
     </ion-item>
+
+    <hr />
 
     <button fab fab-right fab-top>
       <ion-icon name="call"></ion-icon>
     </button>
 
-      <ion-row>
+      <ion-row class="servicios">
         <ion-col width-33>
           <button primary clear>
             <ion-icon name="basket"></ion-icon>
@@ -57,6 +72,8 @@
           </button>
         </ion-col>
       </ion-row>
+
+    <hr />
 
     <ion-item>
       <span item-left>Av. Callao 1337</span>
