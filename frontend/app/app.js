@@ -1,16 +1,17 @@
 import {App, IonicApp, Platform, MenuController} from 'ionic-angular';
-import {HelloIonicPage} from './pages/hello-ionic/hello-ionic';
+import {BicicleteriaMapa} from './pages/bicicleteria-mapa/bicicleteria-mapa';
 import {BicicleteriaListPage} from './pages/bicicleteria-list/bicicleteria-list';
 import {TabsPage} from './pages/tabs/tabs';
 import {BicicleteriaService} from './services/bicicleteria-service';
 import {Geolocation} from 'ionic-native';
+import {ANGULAR2_GOOGLE_MAPS_PROVIDERS} from 'angular2-google-maps/core';
 
 @App({
   templateUrl: 'build/app.html',
   config: {
     tabbarPlacement:'top'
   },
-  providers: [BicicleteriaService]
+  providers: [BicicleteriaService, ANGULAR2_GOOGLE_MAPS_PROVIDERS]
 })
 
 class MyApp {
@@ -31,7 +32,7 @@ class MyApp {
     //   { title: 'Bicicleterias', component: BicicleteriaListPage }
     // ];
     this.pages = [
-      { title: 'Hello Ionic', component: TabsPage, index: 1, icon: 'calendar' },
+      { title: 'Mapa', component: TabsPage, index: 1, icon: 'calendar' },
       { title: 'Bicicleterias', component: TabsPage, index: 0, icon: 'contacts' }
     ];
 

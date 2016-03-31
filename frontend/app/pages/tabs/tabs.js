@@ -1,5 +1,5 @@
 import {Page, NavParams} from 'ionic-angular';
-import {HelloIonicPage} from '../hello-ionic/hello-ionic';
+import {BicicleteriaMapaPage} from '../bicicleteria-mapa/bicicleteria-mapa';
 import {BicicleteriaListPage} from '../bicicleteria-list/bicicleteria-list';
 
 @Page({
@@ -16,7 +16,7 @@ export class TabsPage {
     this.myIndex = 0;
     if (navParams.data.index) this.myIndex = navParams.data.index;
 
-    this.tab1Root = HelloIonicPage;
+    this.tab1Root = BicicleteriaMapaPage;
     this.tab2Root = BicicleteriaListPage;
   }
 }
