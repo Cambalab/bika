@@ -11,6 +11,9 @@
 </ion-navbar>
 
 <ion-content>
+  <button fab id="button-locate">
+    <ion-icon name="locate"></ion-icon>
+  </button>
   <sebm-google-map disableDefaultUI=true zoomControl=true [latitude]="lat" [longitude]="lng" [zoom]="zoom">
     <sebm-google-map-marker
       *ngFor="#m of markers; #i = index"
