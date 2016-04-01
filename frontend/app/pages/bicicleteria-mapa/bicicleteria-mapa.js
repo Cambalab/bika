@@ -11,7 +11,7 @@ import {FilterPage, FiltersModal} from '../modal-filters/modal-filters';
   directives: [ANGULAR2_GOOGLE_MAPS_DIRECTIVES],
   styles: [`
     .sebm-google-map-container {
-       height: 300px;
+       height: 100%;
      }
   `]
 })
@@ -61,6 +61,11 @@ export class BicicleteriaMapaPage {
   openFiltersModal() {
     let modal = Modal.create(FiltersModal);
     this.nav.present(modal);
+  }
+
+
+  centerMap(){
+    console.log("Center map");
   }
 
   ngOnInit() {
