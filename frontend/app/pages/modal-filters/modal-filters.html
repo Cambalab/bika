@@ -1,0 +1,40 @@
+<ion-navbar *navbar>
+  <ion-title>Configurar Filtros</ion-title>
+  <ion-buttons end>
+    <button (click)="close()">
+      <ion-icon name="close"></ion-icon>
+    </button>
+  </ion-buttons>
+
+</ion-navbar>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      Servicios
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Venta</ion-label>
+      <ion-checkbox checked="true"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Reparacion</ion-label>
+      <ion-checkbox checked="true"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Indumentaria</ion-label>
+      <ion-checkbox checked="true"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-label>Mostrar negocios cerrados</ion-label>
+    <ion-toggle checked="true"></ion-toggle>
+  </ion-item>
+
+  <button id="saveFiltersButton">
+    <ion-icon big name="checkmark"></ion-icon>
+    Filtrar
+  </button>
+
+</ion-content>
