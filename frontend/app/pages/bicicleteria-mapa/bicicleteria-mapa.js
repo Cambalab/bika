@@ -21,7 +21,7 @@ export class BicicleteriaMapaPage {
     return [[NavController], [NavParams], [BicicleteriaService]];
   }
 
-  constructor(nav, navParams, bicicleteriaService, abrirModal) {
+  constructor(nav, navParams, bicicleteriaService) {
     this.nav = nav;
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
