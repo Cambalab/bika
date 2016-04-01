@@ -1,4 +1,4 @@
-import {Page, Component, NavController, NavParams, Modal} from 'ionic-angular';
+import {Page, Component, NavController, NavParams, Alert, Modal} from 'ionic-angular';
 import {BicicleteriaDetailsPage} from '../bicicleteria-details/bicicleteria-details';
 import {BicicleteriaService} from '../../services/bicicleteria-service';
 import {Geolocation} from 'ionic-native';
@@ -32,6 +32,30 @@ export class BicicleteriaMapaPage {
       this.lat = resp.coords.latitude;
       this.zoom = 15;
     })
+  }
+
+  clickedMarker(bicicleteria) {
+    let confirm = Alert.create({
+      title: bicicleteria.name,
+      message: 'Av. Callao 1337 <small>(3km)</small><br/><br/><strong>Servicios:</strong><br/> <italic>Venta</italic> | <italic>Reparacion</italic> | <italic>Indumentaria</italic>',
+      buttons: [
+        {
+          text: 'Mas Info',
+          handler: () => {
+            this.nav.push(BicicleteriaDetailsPage, {
+              item: bicicleteria
+            });
+          }
+        },
+        {
+          text: 'Ir!',
+          handler: () => {
+            console.log('Mostrar navegacion.');
+          }
+        }
+      ]
+    });
+    this.nav.present(confirm);
   }
 
   openFiltersModal() {
@@ -70,10 +94,5 @@ export class BicicleteriaMapaPage {
     });
 
   }
-
-  clickedMarker(label, index) {
-    window.alert(`clicked the marker: ${label || index}`);
-  }
-
 
 }
