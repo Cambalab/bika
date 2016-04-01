@@ -63,6 +63,11 @@ export class BicicleteriaMapaPage {
     this.nav.present(modal);
   }
 
+
+  centerMap(){
+    console.log("Center map");
+  }
+
   ngOnInit() {
     this.getBicicleterias();
   }

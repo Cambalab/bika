@@ -11,7 +11,7 @@
 </ion-navbar>
 
 <ion-content>
-  <button fab id="button-locate">
+  <button fab fab-right fab-bottom id="button-locate" (click)="centerMap()">
     <ion-icon name="locate"></ion-icon>
   </button>
   <sebm-google-map disableDefaultUI=true zoomControl=true [latitude]="lat" [longitude]="lng" [zoom]="zoom">
