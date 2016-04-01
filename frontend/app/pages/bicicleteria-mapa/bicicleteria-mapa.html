@@ -14,7 +14,7 @@
   <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
     <sebm-google-map-marker
       *ngFor="#m of markers; #i = index"
-      (markerClick)="clickedMarker(m.name, i)"
+      (markerClick)="clickedMarker(m)"
       [latitude]="m.lat"
       [longitude]="m.lng"
       [label]="m.name"
