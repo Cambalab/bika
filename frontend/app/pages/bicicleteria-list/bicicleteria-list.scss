@@ -1,4 +1,10 @@
 .bicicleteria_list{
+  .rate{
+    text-align: center;
+    ion-icon{
+      color: #FBCE03;
+    }
+  }
   .button-add{
     position: fixed;
   }
@@ -7,6 +13,15 @@
   }
   ion-thumbnail img{
     margin: 0 auto;
+  }
+  .distancia{
+    width: 100%;
+    text-align: right;
+    font-size: 1.4rem;
+    ion-icon{
+      font-size: 2rem;
+      vertical-align: middle;
+    }
   }
   .info{
     margin-top: -5px;
@@ -19,15 +34,6 @@
     }
     .direccion{
       font-size: 1.4rem;
-    }
-    .distancia{
-      width: 100%;
-      text-align: right;
-      font-size: 1.4rem;
-      ion-icon{
-        font-size: 2rem;
-        vertical-align: middle;
-      }
     }
     .estado{
       font-size: 1.4rem;
