@@ -14,6 +14,7 @@
   <button fab fab-right fab-bottom id="button-locate" (click)="centerMap()">
     <ion-icon name="locate"></ion-icon>
   </button>
+  <div class="loader"></div>
   <sebm-google-map disableDefaultUI=true zoomControl=true [latitude]="lat" [longitude]="lng" [zoom]="zoom">
     <sebm-google-map-marker
       *ngFor="#m of markers; #i = index"
