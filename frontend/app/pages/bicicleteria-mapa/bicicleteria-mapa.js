@@ -35,27 +35,28 @@ export class BicicleteriaMapaPage {
   }
 
   clickedMarker(bicicleteria) {
-    let confirm = Alert.create({
-      title: bicicleteria.name,
-      message: 'Av. Callao 1337 <small>(3km)</small><br/><br/><strong>Servicios:</strong><br/> <italic>Venta</italic> | <italic>Reparacion</italic> | <italic>Indumentaria</italic>',
-      buttons: [
-        {
-          text: 'Mas Info',
-          handler: () => {
-            this.nav.push(BicicleteriaDetailsPage, {
-              item: bicicleteria
-            });
-          }
-        },
-        {
-          text: 'Ir!',
-          handler: () => {
-            console.log('Mostrar navegacion.');
-          }
-        }
-      ]
-    });
-    this.nav.present(confirm);
+    console.log("a");
+    // let confirm = Alert.create({
+    //   title: bicicleteria.name,
+    //   message: 'Av. Callao 1337 <small>(3km)</small><br/><br/><strong>Servicios:</strong><br/> <italic>Venta</italic> | <italic>Reparacion</italic> | <italic>Indumentaria</italic>',
+    //   buttons: [
+    //     {
+    //       text: 'Mas Info',
+    //       handler: () => {
+    //         this.nav.push(BicicleteriaDetailsPage, {
+    //           item: bicicleteria
+    //         });
+    //       }
+    //     },
+    //     {
+    //       text: 'Ir!',
+    //       handler: () => {
+    //         console.log('Mostrar navegacion.');
+    //       }
+    //     }
+    //   ]
+    // });
+    // this.nav.present(confirm);
   }
 
   openFiltersModal() {

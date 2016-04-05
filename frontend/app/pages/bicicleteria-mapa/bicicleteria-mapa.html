@@ -22,6 +22,23 @@
       [longitude]="m.lng"
       [label]="m.name"
       [title]="m.name">
+      <sebm-google-map-info-window [disableAutoPan]="false">
+        <div class="info-window">
+          <span class="nombre">{{ m.name }}</span>
+          <span class="direccion">Av. Callao 1337 <small>(3km)</small></span>
+          <span class="servicios">
+            <strong>Servicios:</strong><br>
+            <italic>Venta</italic> | <italic>Reparacion</italic> | <italic>Indumentaria</italic>
+          </span>
+          <span class="rate">
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+          </span>
+        </div>
+      </sebm-google-map-info-window>
     </sebm-google-map-marker>
 
     <sebm-google-map-marker

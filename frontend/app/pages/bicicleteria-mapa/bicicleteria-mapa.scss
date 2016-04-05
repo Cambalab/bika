@@ -2,3 +2,30 @@
   position: fixed;
   z-index: 999;
 }
+sebm-google-map-info-window{
+  text-align: center;
+}
+
+.info-window{
+  text-align: center;
+  margin: 1em;
+  .nombre{
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+  .direccion{
+    margin-bottom: 1em;
+    display: block;
+  }
+  .servicios{
+    display: block;
+    margin-bottom: 1em;
+  }
+  .rate{
+    ion-icon{
+      color: #FBCE03;
+    }
+  }
+}
