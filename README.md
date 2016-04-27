@@ -19,6 +19,8 @@ Aplicación híbrida para encontrar y reseñar bicicleterías.
     git clone https://github.com/Cambalab/bika.git
     ```
 
+### Frontend
+
 1. Ir al directorio bika
     ```sh
     cd bika/frontend
@@ -57,10 +59,11 @@ Aplicación híbrida para encontrar y reseñar bicicleterías.
     ionic build android
 ```
 
-## Correr Backend/Server de pruebas
+### Backend
 
 ```sh
-    cd frontend
+    cd backend
+    npm install
     node server
 ```
 

@@ -2,7 +2,7 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     compression = require('compression'),
     cors = require('cors'),
-    bicicleterias = require('./server/bicicleteria-service'),
+    bicicleterias = require('./bicicleteria-service'),
     app = express();
 
 app.set('port', process.env.PORT || 8000);
