@@ -13,7 +13,10 @@
     "body-parser": "^1.14.2",
     "compression": "^1.6.1",
     "cors": "^2.7.1",
-    "lodash": "^4.6.1"
+    "lodash": "^4.6.1",
+    "q": "^1.4.1",
+    "redis": "^2.0.1",
+    "async": "^1.5.2"
   },
   "devDependencies": {
   }
