@@ -1,4 +1,4 @@
-import {App, IonicApp, Platform, MenuController} from 'ionic-angular';
+import {App, Platform, MenuController} from 'ionic-angular';
 import {BicicleteriaMapa} from './pages/bicicleteria-mapa/bicicleteria-mapa';
 import {BicicleteriaListPage} from './pages/bicicleteria-list/bicicleteria-list';
 import {TabsPage} from './pages/tabs/tabs';
@@ -13,15 +13,12 @@ import {ANGULAR2_GOOGLE_MAPS_PROVIDERS} from 'angular2-google-maps/core';
   },
   providers: [BicicleteriaService, ANGULAR2_GOOGLE_MAPS_PROVIDERS]
 })
-
-class MyApp {
+export class MyApp {
   static get parameters() {
-    return [[IonicApp], [Platform], [MenuController]];
+    return [[Platform], [MenuController]];
   }
 
-  constructor(app, platform, menu) {
-    // set up our app
-    this.app = app;
+  constructor(platform, menu) {
     this.platform = platform;
     this.menu = menu;
     this.initializeApp();
@@ -46,14 +43,6 @@ class MyApp {
     // navigate to the new page if it is not the current page
     let nav = this.app.getComponent('nav');
     nav.setRoot(page.component, { index: page.index });
-  }
-
-  openPage(page) {
-    // close the menu when clicking a link from the menu
-    this.menu.close();
-    // navigate to the new page if it is not the current page
-    let nav = this.app.getComponent('nav');
-    nav.setRoot(page.component);
   }
 
   initializeApp() {
