@@ -16,35 +16,46 @@
         <ion-col>
           <span class="nombre">{{selectedItem.name}}</span>
         </ion-col>
-        <ion-col>
-          <span class="estado estado-abierto">Abierto</span>
+        <ion-col class="rate">
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
         </ion-col>
       </ion-row>
     </ion-item>
 
     <hr />
 
-    <ion-item class="horario">
-      <div (click)="toggleHorario()">
-        <h2>Horarios&nbsp;</h2>
-        <ion-icon *ngIf="mostrarHorario" name="arrow-up"></ion-icon>
-        <ion-icon *ngIf="!mostrarHorario" name="arrow-down"></ion-icon>
-      </div>
-      <div *ngIf="mostrarHorario">
-        <ion-row>
-          <p item-left>L a V:&nbsp;</p>
-          <p item-right>8 a 20 hs</p>
-        </ion-row>
-        <ion-row>
-          <p item-left>Sabado:&nbsp;</p>
-          <p item-right>10 a 18 hs</p>
-        </ion-row>
-        <ion-row>
-          <p item-left>Domingo:&nbsp;</p>
-          <p item-right>Cerrados</p>
-        </ion-row>
-      </div>
-    </ion-item>
+    <ion-row>
+      <ion-col width-50>
+        <ion-item class="horario">
+          <div (click)="toggleHorario()">
+            <h2>Horarios&nbsp;</h2>
+            <ion-icon *ngIf="mostrarHorario" name="arrow-up"></ion-icon>
+            <ion-icon *ngIf="!mostrarHorario" name="arrow-down"></ion-icon>
+          </div>
+          <div *ngIf="mostrarHorario">
+            <ion-row>
+              <p item-left>L a V:&nbsp;</p>
+              <p item-right>8 a 20 hs</p>
+            </ion-row>
+            <ion-row>
+              <p item-left>Sabado:&nbsp;</p>
+              <p item-right>10 a 18 hs</p>
+            </ion-row>
+            <ion-row>
+              <p item-left>Domingo:&nbsp;</p>
+              <p item-right>Cerrados</p>
+            </ion-row>
+          </div>
+        </ion-item>
+      </ion-col>
+      <ion-col width-50 class="estado">
+        <span class="estado-abierto">Abierto</span>
+      </ion-col>
+    </ion-row>
 
     <hr />
 

@@ -1,15 +1,24 @@
 .bicicleteria_detalle{
+  .rate{
+    text-align: right;
+    color:#FBCE03;
+    font-size: 14px;
+    margin-right: 9px;
+
+  }
+  .estado{
+     font-size: 1.4rem;
+     line-height: 44px;
+     text-align: center;
+    &-abierto{
+      color:green;
+    }
+    &-cerrado{
+      color:red;
+    }
+  }
   .info{
     margin-top: 7px;
-    .estado{
-       font-size: 1.4rem;
-      &-abierto{
-        color:green;
-      }
-      &-cerrado{
-        color:red;
-      }
-    }
     ion-row{
       padding:0;
     }
@@ -21,6 +30,7 @@
     }
   }
   .horario{
+    padding-left: 9px;
     h2{
       display: inline-block;
     }
