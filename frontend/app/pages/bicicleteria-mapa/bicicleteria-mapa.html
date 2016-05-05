@@ -14,6 +14,7 @@
   <button fab fab-right fab-bottom id="button-locate" (click)="centerMap()">
     <ion-icon name="locate"></ion-icon>
   </button>
+  <div class="loader"></div>
   <sebm-google-map disableDefaultUI=true zoomControl=true [latitude]="lat" [longitude]="lng" [zoom]="zoom">
     <sebm-google-map-marker
       *ngFor="#m of markers; #i = index"
@@ -22,6 +23,32 @@
       [longitude]="m.lng"
       [label]="m.name"
       [title]="m.name">
+      <sebm-google-map-info-window [disableAutoPan]="false">
+        <div class="info-window">
+          <span class="nombre">{{ m.name }}</span>
+          <span class="direccion">Av. Callao 1337 <small>(3km)</small></span>
+          <span class="servicios">
+            <strong>Servicios:</strong><br>
+            <italic>Venta</italic> | <italic>Reparacion</italic> | <italic>Indumentaria</italic>
+          </span>
+          <span class="rate">
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+          </span>
+        </div>
+      </sebm-google-map-info-window>
     </sebm-google-map-marker>
+
+    <sebm-google-map-marker
+      [latitude]="lat"
+      [longitude]="lng"
+      [label]="'Vos'"
+      [iconUrl]="'http://maps.google.com/mapfiles/ms/micons/cycling.png'"
+      [title]="'Vos'">
+    </sebm-google-map-marker>
+
   </sebm-google-map>
 </ion-content>
