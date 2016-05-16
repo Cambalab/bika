@@ -13,7 +13,7 @@ app.use(compression());
 
 app.use('/', express.static(__dirname + '/www'));
 
-app.get('/bicicleterias', bicicleterias.findAll);
+app.get('/bicicleterias', bicicleterias.findNear);
 app.get('/bicicleterias/:id', bicicleterias.findById);
 
 app.listen(app.get('port'), function () {

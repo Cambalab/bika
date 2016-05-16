@@ -1,14 +1,30 @@
 var BICICLETERIAS = require('./mock-bicicleterias').data;
 var redis = require('./redis-backend');
 
-function findAll(req, res, next) {
-  return res.json(BICICLETERIAS);
+function findNear(req, res, next) {
+  var lat = req.query.lat;
+  var lng = req.query.lng;
+
+  if(!lat && !lng) {
+    return res.json({"status" : "error", "message" : 'Lat or Lng not sent.'});
+  }
+
+  redis.findBicicleterias(lng, lat, 2, 'km')
+    .then( function(result) { res.json({"status" : "success", "result" : result }); })
+    .fail( function(err) { res.json({"status" : "error", "message" : err}); });
 }
 
 function findById(req, res, next) {
   var id = req.params.id;
-  res.json(BICICLETERIAS[id - 1]);
+
+  if(!id) {
+    return res.json({"status" : "error", "message" : 'Id not sent.'});
+  }
+
+  redis.findById(id)
+    .then( function(result) { res.json({"status" : "success", "result" : result }); })
+    .fail( function(err) { res.json({"status" : "error", "message" : err}); });
 }
 
-exports.findAll = findAll;
+exports.findNear = findNear;
 exports.findById = findById;
