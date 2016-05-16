@@ -1,5 +1,5 @@
 import {App, IonicApp, Platform, MenuController} from 'ionic-angular';
-import {BicicleteriaMapa} from './pages/bicicleteria-mapa/bicicleteria-mapa';
+import {BicicleteriaMapaPage} from './pages/bicicleteria-mapa/bicicleteria-mapa';
 import {BicicleteriaListPage} from './pages/bicicleteria-list/bicicleteria-list';
 import {TabsPage} from './pages/tabs/tabs';
 import {BicicleteriaService} from './services/bicicleteria-service';
@@ -20,20 +20,15 @@ class MyApp {
   }
 
   constructor(app, platform, menu) {
-    // set up our app
     this.app = app;
     this.platform = platform;
     this.menu = menu;
     this.initializeApp();
 
     // set our app's pages
-    // this.pages = [
-    //   { title: 'Hello Ionic', component: HelloIonicPage },
-    //   { title: 'Bicicleterias', component: BicicleteriaListPage }
-    // ];
     this.pages = [
-      { title: 'Mapa', component: TabsPage, index: 1, icon: 'calendar' },
-      { title: 'Bicicleterias', component: TabsPage, index: 0, icon: 'contacts' }
+      { title: 'Bicicleterias', component: TabsPage, index: 0, icon: 'contacts' },
+      { title: 'Mapa', component: TabsPage, index: 1, icon: 'calendar' }
     ];
 
     // make HelloIonicPage the root (or first) page
@@ -46,14 +41,6 @@ class MyApp {
     // navigate to the new page if it is not the current page
     let nav = this.app.getComponent('nav');
     nav.setRoot(page.component, { index: page.index });
-  }
-
-  openPage(page) {
-    // close the menu when clicking a link from the menu
-    this.menu.close();
-    // navigate to the new page if it is not the current page
-    let nav = this.app.getComponent('nav');
-    nav.setRoot(page.component);
   }
 
   initializeApp() {
