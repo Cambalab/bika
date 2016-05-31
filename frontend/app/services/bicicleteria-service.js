@@ -1,5 +1,5 @@
 import {Injectable} from 'angular2/core';
-import {Http, Headers, RequestOptions} from 'angular2/http';
+import {Http, Headers, RequestOptions, URLSearchParams} from 'angular2/http';
 import {API_BASE_URL} from './settings';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/Rx';
@@ -17,10 +17,20 @@ export class BicicleteriaService {
         this.http = http;
     }
 
-    findAll() {
-        return this.http.get(bicicleteriasURL)
-            .map(res => res.json())
-            .catch(this.handleError);
+    findNear(lng, lat) {
+      let params = new URLSearchParams();
+      params.set('lng', lng);
+      params.set('lat', lat);
+
+      let headers = new Headers({ 'Content-Type': 'application/json' });
+      let options = new RequestOptions({
+          headers: headers,
+          search: params
+      });
+
+      return this.http.get(bicicleteriasURL, options)
+          .map(res => res.json())
+          .catch(this.handleError);
     }
 
     findById(id) {

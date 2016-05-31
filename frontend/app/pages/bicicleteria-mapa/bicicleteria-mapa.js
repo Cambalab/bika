@@ -26,16 +26,9 @@ export class BicicleteriaMapaPage {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
     this.bicicleteriaService = bicicleteriaService;
-
-    Geolocation.getCurrentPosition().then((resp) => {
-      this.lng = resp.coords.longitude;
-      this.lat = resp.coords.latitude;
-      this.zoom = 15;
-    })
   }
 
   clickedMarker(bicicleteria) {
-    console.log("a");
     // let confirm = Alert.create({
     //   title: bicicleteria.name,
     //   message: 'Av. Callao 1337 <small>(3km)</small><br/><br/><strong>Servicios:</strong><br/> <italic>Venta</italic> | <italic>Reparacion</italic> | <italic>Indumentaria</italic>',
@@ -70,14 +63,19 @@ export class BicicleteriaMapaPage {
   }
 
   ngOnInit() {
-    this.getBicicleterias();
+    Geolocation.getCurrentPosition().then((resp) => {
+      this.lng = resp.coords.longitude;
+      this.lat = resp.coords.latitude;
+      this.zoom = 15;
+      this.getBicicleterias();
+    })
   }
 
   getBicicleterias() {
-    this.bicicleteriaService.findAll().subscribe(
+    this.bicicleteriaService.findNear(this.lng, this.lat).subscribe(
       data => {
-        this.bicicleterias = data;
-        this.markers = this.createMarkers(data,  {lat : 'lat', lng : 'lng', name : 'name'}, { title: 'name'});
+        this.bicicleterias = data.result;
+        this.markers = this.createMarkers(this.bicicleterias,  {lat : 'lat', lng : 'lng', name : 'name'}, { title: 'name'});
       });
   }
 

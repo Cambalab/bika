@@ -21,8 +21,9 @@ export class BicicleteriaListPage {
     this.bicicleteriaService = bicicleteriaService;
 
     Geolocation.getCurrentPosition().then((resp) => {
-       console.log("Latitude: ", resp.coords.latitude);
-       console.log("Longitude: ", resp.coords.longitude);
+      this.lng = resp.coords.longitude;
+      this.lat = resp.coords.latitude;console.log();
+      this.zoom = 15;
     })
   }
 
@@ -32,11 +33,16 @@ export class BicicleteriaListPage {
   }
 
   ngOnInit() {
-    this.getBicicleterias();
+    Geolocation.getCurrentPosition().then((resp) => {
+      this.lng = resp.coords.longitude;
+      this.lat = resp.coords.latitude;console.log();
+      this.zoom = 15;
+      this.getBicicleterias();
+    })
   }
 
   getBicicleterias() {
-    this.bicicleteriaService.findAll().subscribe(data => this.bicicleterias = data);
+    this.bicicleteriaService.findNear(this.lng, this.lat).subscribe(data => this.bicicleterias = data.result );
   }
 
   itemTapped(event, bicicleteria) {
