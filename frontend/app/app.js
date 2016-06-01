@@ -1,4 +1,4 @@
-import {App, IonicApp, Platform, MenuController} from 'ionic-angular';
+import {App, IonicApp, Platform, MenuController, Tab} from 'ionic-angular';
 import {BicicleteriaMapaPage} from './pages/bicicleteria-mapa/bicicleteria-mapa';
 import {BicicleteriaListPage} from './pages/bicicleteria-list/bicicleteria-list';
 import {TabsPage} from './pages/tabs/tabs';
@@ -40,7 +40,9 @@ class MyApp {
     this.menu.close();
     // navigate to the new page if it is not the current page
     let nav = this.app.getComponent('nav');
-    nav.setRoot(page.component, { index: page.index });
+
+    //nav.setRoot(page.component, { index: page.index });
+    nav.push(page.component, { index: page.index });
   }
 
   initializeApp() {

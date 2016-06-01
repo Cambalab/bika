@@ -26,6 +26,27 @@ export class BicicleteriaMapaPage {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
     this.bicicleteriaService = bicicleteriaService;
+
+    this.lng = "";
+    this.lat = "";
+    this.zoom = 15;
+
+    this.centerMap();
+  }
+
+  centerMap(){
+    var geoSettings = {timeout: 15000, enableHighAccuracy: true};
+
+    Geolocation.getCurrentPosition(geoSettings).then((position) => {
+        this.lng = position.coords.longitude;
+        this.lat = position.coords.latitude;
+        console.log("Latitude: ", position.coords.latitude);
+        console.log("Longitude: ", position.coords.longitude);
+      },
+      function error(error) {
+          alert('code: ' + error.code + '\n' +
+          'message: ' + error.message + '\n');
+      });
   }
 
   clickedMarker(bicicleteria) {
@@ -55,11 +76,6 @@ export class BicicleteriaMapaPage {
   openFiltersModal() {
     let modal = Modal.create(FiltersModal);
     this.nav.present(modal);
-  }
-
-
-  centerMap(){
-    console.log("Center map");
   }
 
   ngOnInit() {
