@@ -17,7 +17,7 @@
   <div class="loader"></div>
   <sebm-google-map disableDefaultUI=true zoomControl=true [latitude]="lat" [longitude]="lng" [zoom]="zoom">
     <sebm-google-map-marker
-      *ngFor="#m of markers; #i = index"
+      *ngFor="let m of markers; let i = index"
       (markerClick)="clickedMarker(m)"
       [latitude]="m.lat"
       [longitude]="m.lng"

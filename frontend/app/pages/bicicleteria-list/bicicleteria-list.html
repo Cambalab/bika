@@ -13,7 +13,7 @@
 
 <ion-content class="bicicleteria_list">
   <ion-list>
-    <button ion-item *ngFor="#bicicleteria of bicicleterias" (click)="itemTapped($event, bicicleteria)">
+    <button ion-item *ngFor="let bicicleteria of bicicleterias" (click)="itemTapped($event, bicicleteria)">
       <ion-row>
         <ion-col width-33>
           <ion-thumbnail>
